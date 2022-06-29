@@ -58,7 +58,8 @@ section {
         .heading {
             display: flex;
             justify-content: space-between;
-            background-color: #3b82f6;
+            background: linear-gradient(to right, #44403c, #78716c);
+            background-color: #64748b;
             color: white;
             padding: 0.5rem;
             font-weight: 300;
