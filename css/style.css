@@ -5,10 +5,16 @@
   box-sizing: border-box;
 }
 
-body {
+.container {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
 }
 
+header {
+  border-bottom: 0.05rem solid #e2e8f0;
+}
 header h1 {
   text-align: center;
   background-color: #0f172a;
@@ -32,4 +38,31 @@ a {
 }
 a:hover {
   color: #3b82f6;
+}
+
+section {
+  margin: 1rem;
+}
+section article {
+  border: thin solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+section article .heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0f172a;
+  color: white;
+  padding: 0.5rem;
+  font-weight: 300;
+}
+section article .content {
+  padding: 0.5rem;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #e2e8f0;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

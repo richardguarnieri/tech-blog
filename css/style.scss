@@ -11,8 +11,11 @@ $secondaryColor: #3b82f6;
     box-sizing: border-box;
 }
 
-body {
+.container {
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
 }
 
 header {
@@ -34,6 +37,8 @@ header {
             }
         }
     }
+    border-bottom: 0.05rem solid #e2e8f0;
+    // box-shadow: 0 0.1rem #e2e8f0;
 }
 
 a {
@@ -42,4 +47,31 @@ a {
     &:hover {
         color: $secondaryColor;
     }
+}
+
+section {
+    margin: 1rem;
+    article {
+        border: thin solid #e2e8f0;
+        margin-bottom: 1rem;
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            background-color: $primaryColor;
+            color: white;
+            padding: 0.5rem;
+            font-weight: 300;
+        }
+        .content {
+            padding: 0.5rem;
+        }
+    }
+}
+
+footer {
+    margin-top: auto;
+    background-color: #e2e8f0;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 300;
 }
