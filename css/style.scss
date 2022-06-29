@@ -21,6 +21,7 @@ $secondaryColor: #3b82f6;
 header {
     h1 {
         text-align: center;
+        background: linear-gradient(to right, #0f172a, #334155);
         background-color: $primaryColor;
         color: white;
         padding: 1rem 0;
@@ -57,20 +58,31 @@ section {
         .heading {
             display: flex;
             justify-content: space-between;
-            background-color: $primaryColor;
+            background-color: #3b82f6;
             color: white;
             padding: 0.5rem;
             font-weight: 300;
+            .article-heading {
+                // font-weight: 400;
+            }
         }
         .content {
             padding: 0.5rem;
+        }
+        &:hover {
+            cursor: pointer;
+            .heading {
+                background-color: #ef4444;
+                
+            }
         }
     }
 }
 
 footer {
     margin-top: auto;
-    background-color: #e2e8f0;
+    background: linear-gradient(to right, #0f172a, #334155);
+    color: white;
     padding: 1rem;
     text-align: center;
     font-weight: 300;

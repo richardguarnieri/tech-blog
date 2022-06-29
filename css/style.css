@@ -17,6 +17,7 @@ header {
 }
 header h1 {
   text-align: center;
+  background: linear-gradient(to right, #0f172a, #334155);
   background-color: #0f172a;
   color: white;
   padding: 1rem 0;
@@ -50,7 +51,7 @@ section article {
 section article .heading {
   display: flex;
   justify-content: space-between;
-  background-color: #0f172a;
+  background-color: #3b82f6;
   color: white;
   padding: 0.5rem;
   font-weight: 300;
@@ -58,10 +59,17 @@ section article .heading {
 section article .content {
   padding: 0.5rem;
 }
+section article:hover {
+  cursor: pointer;
+}
+section article:hover .heading {
+  background-color: #ef4444;
+}
 
 footer {
   margin-top: auto;
-  background-color: #e2e8f0;
+  background: linear-gradient(to right, #0f172a, #334155);
+  color: white;
   padding: 1rem;
   text-align: center;
   font-weight: 300;
