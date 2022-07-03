@@ -54,22 +54,26 @@ a {
     margin: 2rem;
     .blog {
         border: thin solid #e2e8f0;
+        border-radius: 1rem;
         margin-bottom: 1rem;
+        overflow: hidden;
+        transition: all 200ms ease-in;
         .blog-heading {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
             align-items: center;
             padding: 1rem;
-            // background: linear-gradient(to right, #44403c, #78716c);
-            background-color: #0f172a;
+            background-color: #1e293b;
             color: white;
             margin-bottom: 0.5rem;
             font-weight: 300;
+            transition: all 200ms ease-in;
             .blog-left-heading {
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-between;
+                margin-bottom: 1rem;
                 .article-title {
                     font-size: larger;
                     font-weight: 700;
@@ -80,6 +84,15 @@ a {
             }
             .blog-right-heading {
                 display: flex;
+                align-items: center;
+                // margin-left: auto;
+                img {
+                    object-fit: cover;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    margin-right: 1rem;
+                    border-radius: 50%;
+                }
                 .article-creator {
                     font-weight: 400;
                 }
@@ -91,12 +104,11 @@ a {
                 font-weight: 300;
             }
         }
-
         &:hover {
             cursor: pointer;
+            box-shadow: 0 0.2rem 0.3rem #f1f5f9;
             .blog-heading {
-                background-color: #ef4444;
-                
+                background-color: #1d4ed8;
             }
         }
     }
@@ -114,9 +126,9 @@ footer {
 
 @media screen and (min-width: 640px) {
     #home { 
-        article {
-            .heading {
-                .article-heading {
+        .blog {
+            .blog-heading {
+                .blog-left-heading {
                     margin-bottom: 0;
                 }
             }
