@@ -6,7 +6,7 @@ header {
         // background: linear-gradient(to right, #0f172a, #334155);
         background-color: $slate-900;
         color: white;
-        padding: 1rem 0;
+        padding: 1rem;
         font-weight: 300;
     }
     nav {
@@ -14,7 +14,7 @@ header {
             @include flex(
                 $justify-content: space-around,
             );
-            padding: 0.5rem 0;
+            padding: 1rem;
             li {
                 list-style: none;
                 font-size: larger;

@@ -5,6 +5,7 @@
 @import "./blogs";
 @import "./signupin";
 @import "./footer";
+@import "./utilities";
 
 * {
     margin: 0;
@@ -12,13 +13,21 @@
     box-sizing: border-box;
 }
 
-.container {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-flow: column nowrap;
-    min-height: 100vh;
-}
-
 a {
     @include links;
+}
+
+input {
+    @include input-forms;
+}
+
+button {
+    @include button;
+}
+
+label {
+    &::after {
+        content: ' *';
+        color: red;
+    }
 }

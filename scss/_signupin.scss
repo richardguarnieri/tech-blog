@@ -2,22 +2,25 @@
 .sign {
     @include flex(
         $flex-direction: column, // @media
+        $gap: 3rem,
     );
-    margin: 2rem;
+    margin: 2rem 3rem;
     .sign-info {
         flex-basis: 50%;
         @include flex(
             $flex-direction: column,
         );
-        padding: 0 1rem;
-        margin-bottom: 1rem; // @media
         p {
             margin: auto 0;
         }
     }
     .sign-form {
         flex-basis: 50%;
+        fieldset {
+            border: none;
+        }
         legend {
+            width: 100%;
             background-color: $slate-900;
             color: white;
             padding: 1rem;
@@ -32,18 +35,6 @@
             );
             padding: 0 1rem;
             margin-bottom: 0.5rem;
-            label {
-                &::after {
-                    content: ' *';
-                    color: red;
-                }
-            }
-            input {
-                padding: 0.5rem;
-                &::placeholder {
-                    color: #94a3b8;
-                }
-            }
         }
         .form-submission {
             @include flex(
@@ -53,20 +44,6 @@
             );
             padding: 0 1rem;
             margin-top: 1rem; // @media
-            .button {
-                margin: 0.5rem 0.75rem 0 0;
-                padding: 1rem 2rem;
-                border-radius: 2rem;
-                background-color: $blue-500;
-                color: white;
-                font-size: medium;
-                font-weight: 200;
-                border: thin solid $slate-200;
-                &:hover {
-                    cursor: pointer;
-                    background-color: #1e40af;
-                }
-            }
         }
     }
 }
@@ -74,9 +51,6 @@
 @media screen and (min-width: 640px) {
     .sign {
         flex-flow: row;
-        .sign-info {
-            margin-bottom: 0;
-        }
         .sign-form {
             .form-submission {
                 flex-flow: row wrap;

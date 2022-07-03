@@ -1,16 +1,17 @@
 // Mixins
-
 @mixin flex(
     $flex-direction: row,
     $flex-wrap: nowrap,
     $justify-content: flex-start,
     $align-items: stretch,
+    $gap: 0,
 ) {
     display: flex;
     flex-direction: $flex-direction;
     flex-wrap: $flex-wrap;
     justify-content: $justify-content;
     align-items: $align-items;
+    gap: $gap
 }
 
 @mixin links {
@@ -20,4 +21,27 @@
         color: $blue-500;
     }
     
+}
+
+@mixin input-forms {
+    padding: 0.75rem 0.5rem;
+    border: thin solid $slate-300;
+    border-radius: 0.25rem;
+    &::placeholder {
+        color: $slate-400;
+    }
+}
+
+@mixin button {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: $blue-500;
+    color: white;
+    font-size: medium;
+    font-weight: 200;
+    border: thin solid $slate-200;
+    &:hover {
+        cursor: pointer;
+        background-color: #1e40af;
+    }
 }
