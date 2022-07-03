@@ -114,27 +114,25 @@ footer {
   font-weight: 300;
 }
 
-@media screen and (min-width: 640px) {
-  #home .blog .blog-heading .blog-left-heading {
-    margin-bottom: 0;
-  }
-}
-#signin {
+.sign {
   display: flex;
+  flex-flow: column;
   margin: 2rem;
 }
-#signin .signin-info {
+.sign .sign-info {
   flex-basis: 50%;
   display: flex;
   flex-flow: column;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
 }
-#signin .signin-info p {
+.sign .sign-info p {
   margin: auto 0;
 }
-#signin .signin-form {
+.sign .sign-form {
   flex-basis: 50%;
 }
-#signin .signin-form legend {
+.sign .sign-form legend {
   background-color: #1e293b;
   color: white;
   padding: 1rem;
@@ -143,34 +141,36 @@ footer {
   font-size: larger;
   font-weight: 200;
 }
-#signin .signin-form .form-input {
+.sign .sign-form .form-input {
   display: flex;
   flex-flow: column;
   padding: 0 1rem;
   margin-bottom: 0.5rem;
 }
-#signin .signin-form .form-input .required {
+.sign .sign-form .form-input label .required {
   color: red;
 }
-#signin .signin-form input {
+.sign .sign-form .form-input input {
   padding: 0.5rem;
 }
-#signin .signin-form input::-moz-placeholder {
+.sign .sign-form .form-input input::-moz-placeholder {
   color: #94a3b8;
 }
-#signin .signin-form input:-ms-input-placeholder {
+.sign .sign-form .form-input input:-ms-input-placeholder {
   color: #94a3b8;
 }
-#signin .signin-form input::placeholder {
+.sign .sign-form .form-input input::placeholder {
   color: #94a3b8;
 }
-#signin .signin-form .form-submission {
+.sign .sign-form .form-submission {
   padding: 0 1rem;
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 1rem;
 }
-#signin .signin-form .button {
+.sign .sign-form .button {
   margin: 0.5rem 0.75rem 0 0;
   padding: 1rem 2rem;
   border-radius: 2rem;
@@ -181,7 +181,25 @@ footer {
   font-weight: 200;
   border: thin solid #e1e7ef;
 }
-#signin .signin-form .button:hover {
+.sign .sign-form .button:hover {
   cursor: pointer;
   background-color: #1e40af;
+}
+
+@media screen and (min-width: 640px) {
+  #home .blog .blog-heading .blog-left-heading {
+    margin-bottom: 0;
+  }
+
+  .sign {
+    flex-flow: row;
+  }
+  .sign .sign-info {
+    margin-bottom: 0;
+  }
+  .sign .sign-form .form-submission {
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
