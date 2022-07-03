@@ -101,7 +101,8 @@ header nav ul li {
   gap: 3rem;
   margin: 2rem 3rem;
 }
-.sign .sign-info {
+
+.sign-info {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -110,26 +111,15 @@ header nav ul li {
   align-items: stretch;
   gap: 0;
 }
-.sign .sign-info p {
+.sign-info p {
   margin: auto 0;
 }
-.sign .sign-form {
+
+.sign-form {
   flex-basis: 50%;
 }
-.sign .sign-form fieldset {
-  border: none;
-}
-.sign .sign-form legend {
-  width: 100%;
-  background-color: #0f172a;
-  color: white;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 1rem 1rem 0 0;
-  font-size: larger;
-  font-weight: 200;
-}
-.sign .sign-form .form-input {
+
+.form-input {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -139,7 +129,8 @@ header nav ul li {
   padding: 0 1rem;
   margin-bottom: 0.5rem;
 }
-.sign .sign-form .form-submission {
+
+.form-submission {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -153,11 +144,22 @@ header nav ul li {
   .sign {
     flex-flow: row;
   }
-  .sign .sign-form .form-submission {
+
+  .form-submission {
     flex-flow: row wrap;
     align-items: center;
   }
 }
+.post {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+  margin: 2rem 3rem;
+}
+
 footer {
   margin-top: auto;
   background-color: #0f172a;
@@ -185,6 +187,10 @@ footer {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 * {
@@ -216,18 +222,54 @@ input::placeholder {
   color: #94a3b8;
 }
 
+textarea {
+  padding: 0.75rem 0.5rem;
+  border: thin solid #cbd5e1;
+  border-radius: 0.25rem;
+  font-family: "Poppins", sans-serif;
+  resize: none;
+}
+textarea::-moz-placeholder {
+  color: #94a3b8;
+}
+textarea:-ms-input-placeholder {
+  color: #94a3b8;
+}
+textarea::placeholder {
+  color: #94a3b8;
+}
+
 button {
   padding: 1rem 2rem;
   border-radius: 2rem;
   background-color: #3b82f6;
   color: white;
   font-size: medium;
-  font-weight: 200;
+  font-weight: 300;
   border: thin solid #e2e8f0;
 }
 button:hover {
   cursor: pointer;
   background-color: #1e40af;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  width: 100%;
+  background-color: #0f172a;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem 1rem 0 0;
+  font-size: larger;
+  font-weight: 200;
 }
 
 label::after {

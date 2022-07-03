@@ -23,7 +23,7 @@
     
 }
 
-@mixin input-forms {
+@mixin input {
     padding: 0.75rem 0.5rem;
     border: thin solid $slate-300;
     border-radius: 0.25rem;
@@ -32,13 +32,19 @@
     }
 }
 
+@mixin textarea {
+    @include input;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
 @mixin button {
     padding: 1rem 2rem;
     border-radius: 2rem;
     background-color: $blue-500;
     color: white;
     font-size: medium;
-    font-weight: 200;
+    font-weight: 300;
     border: thin solid $slate-200;
     &:hover {
         cursor: pointer;

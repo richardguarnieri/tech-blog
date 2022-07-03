@@ -1,0 +1,7 @@
+// Create Post Form
+.post {
+    @include flex(
+        $flex-direction: column,
+    );
+    margin: 2rem 3rem;
+}

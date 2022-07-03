@@ -4,6 +4,7 @@
 @import "./header";
 @import "./blogs";
 @import "./signupin";
+@import "./post";
 @import "./footer";
 @import "./utilities";
 
@@ -18,11 +19,34 @@ a {
 }
 
 input {
-    @include input-forms;
+    @include input;
+}
+
+textarea {
+    @include textarea;
 }
 
 button {
     @include button;
+}
+
+input, select, textarea, button {
+    font-family:inherit;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    width: 100%;
+    background-color: $slate-900;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem 1rem 0 0;
+    font-size: larger;
+    font-weight: 200;
 }
 
 label {
