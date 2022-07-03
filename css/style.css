@@ -42,7 +42,7 @@ a:hover {
 }
 
 #home {
-  margin: 1rem;
+  margin: 2rem;
 }
 #home .blog {
   border: thin solid #e2e8f0;
@@ -50,29 +50,43 @@ a:hover {
 }
 #home .blog .blog-heading {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #44403c, #78716c);
+  padding: 1rem;
+  background-color: #0f172a;
   color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
 }
-#home .blog .blog-left-heading {
+#home .blog .blog-heading .blog-left-heading {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  color: white;
-  padding: 0.5rem;
+}
+#home .blog .blog-heading .blog-left-heading .article-title {
+  font-size: larger;
+  font-weight: 700;
+}
+#home .blog .blog-heading .blog-left-heading .article-date {
+  color: #94a3b8;
+}
+#home .blog .blog-heading .blog-right-heading {
+  display: flex;
+}
+#home .blog .blog-heading .blog-right-heading .article-creator {
+  font-weight: 400;
+}
+#home .blog .blog-content {
+  padding: 1rem;
+}
+#home .blog .blog-content .article-content {
   font-weight: 300;
-}
-#home .blog .blog-left-heading .article-heading {
-  margin-bottom: 0.5rem;
-}
-#home .blog .content {
-  padding: 0.5rem;
 }
 #home .blog:hover {
   cursor: pointer;
 }
-#home .blog:hover .heading {
+#home .blog:hover .blog-heading {
   background-color: #ef4444;
 }
 
