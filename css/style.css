@@ -26,14 +26,23 @@ header nav ul li {
 .blogs {
   margin: 2rem 3rem;
 }
-.blogs .blog {
+
+.blog {
   border: thin solid #e1e7ef;
   border-radius: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
   transition: all 200ms ease-in;
 }
-.blogs .blog .blog-heading {
+.blog:hover {
+  cursor: pointer;
+  box-shadow: 0 0.2rem 0.3rem #f1f5f9;
+}
+.blog:hover .blog-heading {
+  background-color: #1d4ed8;
+}
+
+.blog-heading {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -45,24 +54,29 @@ header nav ul li {
   font-weight: 300;
   transition: all 200ms ease-in;
 }
-.blogs .blog .blog-heading .blog-left-heading {
+
+.blog-left-heading {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.blogs .blog .blog-heading .blog-left-heading .article-title {
+
+.article-title {
   font-size: larger;
   font-weight: 700;
 }
-.blogs .blog .blog-heading .blog-left-heading .article-date {
+
+.article-date {
   color: #94a3b8;
 }
-.blogs .blog .blog-heading .blog-right-heading {
+
+.blog-right-heading {
   display: flex;
   align-items: center;
 }
-.blogs .blog .blog-heading .blog-right-heading img {
+
+img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 3.5rem;
@@ -70,25 +84,21 @@ header nav ul li {
   margin-right: 1rem;
   border-radius: 50%;
 }
-.blogs .blog .blog-heading .blog-right-heading .article-creator {
+
+.article-creator {
   font-weight: 400;
 }
-.blogs .blog .blog-content {
+
+.blog-content {
   padding: 1rem;
 }
-.blogs .blog .blog-content .article-content {
+
+.article-content {
   font-weight: 300;
-}
-.blogs .blog:hover {
-  cursor: pointer;
-  box-shadow: 0 0.2rem 0.3rem #f1f5f9;
-}
-.blogs .blog:hover .blog-heading {
-  background-color: #1d4ed8;
 }
 
 @media screen and (min-width: 640px) {
-  .blogs .blog .blog-heading .blog-left-heading {
+  .blog-left-heading {
     margin-bottom: 0;
   }
 }
@@ -150,7 +160,7 @@ header nav ul li {
     align-items: center;
   }
 }
-.post {
+.post, .comments {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -158,6 +168,12 @@ header nav ul li {
   align-items: stretch;
   gap: 0;
   margin: 2rem 3rem;
+}
+
+.comment {
+  padding: 1rem;
+  border: thin solid #e1e7ef;
+  border-top: 0;
 }
 
 footer {
@@ -187,6 +203,10 @@ footer {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.m-0 {
+  margin: 0;
 }
 
 .justify-end {
