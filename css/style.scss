@@ -53,7 +53,7 @@ a {
 #home {
     margin: 2rem;
     .blog {
-        border: thin solid #e2e8f0;
+        border: thin solid #e1e7ef;
         border-radius: 1rem;
         margin-bottom: 1rem;
         overflow: hidden;
@@ -137,8 +137,8 @@ footer {
 }
 
 
-// Login Form
-#login {
+// Sign In Form
+#signin {
     display: flex;
     margin: 2rem;
     .signin-info {
@@ -151,11 +151,50 @@ footer {
     }
     .signin-form {
         flex-basis: 50%;
-    }
-    legend {
-        background-color: #1e293b;
-        color: white;
-        padding: 1rem;
-        border-radius: 1rem 1rem 0 0;
+        legend {
+            background-color: #1e293b;
+            color: white;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 1rem 1rem 0 0;
+            font-size: larger;
+            font-weight: 200;
+        }
+        .form-input {
+            display: flex;
+            flex-flow: column;
+            padding: 0 1rem;
+            margin-bottom: 0.5rem;
+            .required {
+                color: red;
+            }
+        }
+        input {
+            padding: 0.5rem;
+            &::placeholder {
+                color: #94a3b8;
+            }
+        }
+        .form-submission {
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button {
+            margin: 0.5rem 0.75rem 0 0;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-align: right;
+            background-color: #1d4ed8;
+            color: white;
+            font-size: medium;
+            font-weight: 200;
+            border: thin solid #e1e7ef;
+            &:hover {
+                cursor: pointer;
+                background-color: #1e40af;
+            }
+        }
     }
 }
