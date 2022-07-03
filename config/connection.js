@@ -5,15 +5,4 @@ const connectionURI = `mysql://${process.env.DB_USER}:${process.env.DB_PASSWORD}
 
 const sequelize = new Sequelize(connectionURI);
 
-const init = async () => {
-    try {
-        await sequelize.sync()  
-        console.log('Connection has been established successfully.');
-    } catch (err) {
-        console.log('Unable to connect to the database:', err);
-    }
-} 
-
-init()
-
 module.exports = sequelize;
