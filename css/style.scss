@@ -50,20 +50,29 @@ a {
     }
 }
 
-section {
+#home {
     margin: 1rem;
-    article {
+    .blog {
         border: thin solid #e2e8f0;
         margin-bottom: 1rem;
-        .heading {
+        .blog-heading {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             background: linear-gradient(to right, #44403c, #78716c);
-            background-color: #64748b;
+            color: white;
+        }
+        .blog-left-heading {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
             color: white;
             padding: 0.5rem;
             font-weight: 300;
             .article-heading {
+                margin-bottom: 0.5rem;
+            }
+            .article-content {
                 // font-weight: 400;
             }
         }
@@ -87,4 +96,16 @@ footer {
     padding: 1rem;
     text-align: center;
     font-weight: 300;
+}
+
+@media screen and (min-width: 640px) {
+    #home { 
+        article {
+            .heading {
+                .article-heading {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
