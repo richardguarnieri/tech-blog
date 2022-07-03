@@ -190,15 +190,6 @@ header a:hover {
   background-color: #1d4ed8;
 }
 
-footer {
-  margin-top: auto;
-  background: linear-gradient(to right, #0f172a, #334155);
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  font-weight: 300;
-}
-
 @media screen and (min-width: 640px) {
   #home .blog .blog-heading .blog-left-heading {
     margin-bottom: 0;
