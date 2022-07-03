@@ -4,7 +4,6 @@ header {
 }
 header h1 {
   text-align: center;
-  background: linear-gradient(to right, #0f172a, #334155);
   background-color: #0f172a;
   color: white;
   padding: 1rem 0;
@@ -12,19 +11,15 @@ header h1 {
 }
 header nav ul {
   display: flex;
-  padding: 0.5rem 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
+  align-items: stretch;
+  padding: 0.5rem 0;
 }
 header nav ul li {
   list-style: none;
-  font-size: large;
-}
-header a {
-  text-decoration: none;
-  color: black;
-}
-header a:hover {
-  color: #3b82f6;
+  font-size: larger;
 }
 
 .blogs {
@@ -98,13 +93,19 @@ header a:hover {
 }
 .sign {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   margin: 2rem;
 }
 .sign .sign-info {
   flex-basis: 50%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   padding: 0 1rem;
   margin-bottom: 1rem;
 }
@@ -115,7 +116,7 @@ header a:hover {
   flex-basis: 50%;
 }
 .sign .sign-form legend {
-  background-color: #1e293b;
+  background-color: #0f172a;
   color: white;
   padding: 1rem;
   margin-bottom: 0.5rem;
@@ -125,7 +126,10 @@ header a:hover {
 }
 .sign .sign-form .form-input {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   padding: 0 1rem;
   margin-bottom: 0.5rem;
 }
@@ -146,25 +150,25 @@ header a:hover {
   color: #94a3b8;
 }
 .sign .sign-form .form-submission {
-  padding: 0 1rem;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 0 1rem;
   margin-top: 1rem;
 }
-.sign .sign-form .button {
+.sign .sign-form .form-submission .button {
   margin: 0.5rem 0.75rem 0 0;
   padding: 1rem 2rem;
   border-radius: 2rem;
-  text-align: right;
-  background-color: #1d4ed8;
+  background-color: #3b82f6;
   color: white;
   font-size: medium;
   font-weight: 200;
-  border: thin solid #e1e7ef;
+  border: thin solid #e2e8f0;
 }
-.sign .sign-form .button:hover {
+.sign .sign-form .form-submission .button:hover {
   cursor: pointer;
   background-color: #1e40af;
 }
@@ -184,7 +188,7 @@ header a:hover {
 }
 footer {
   margin-top: auto;
-  background: linear-gradient(to right, #0f172a, #334155);
+  background-color: #0f172a;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -202,4 +206,12 @@ footer {
   display: flex;
   flex-flow: column nowrap;
   min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #3b82f6;
 }/*# sourceMappingURL=style.css.map */

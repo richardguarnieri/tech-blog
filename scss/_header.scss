@@ -1,31 +1,24 @@
 // Header incl. Navigation Bar
 header {
+    border-bottom: 0.05rem solid $slate-200;
     h1 {
         text-align: center;
-        background: linear-gradient(to right, #0f172a, #334155);
-        background-color: $primaryColor;
+        // background: linear-gradient(to right, #0f172a, #334155);
+        background-color: $slate-900;
         color: white;
         padding: 1rem 0;
         font-weight: 300;
     }
     nav {
         ul {
-            display: flex;
+            @include flex(
+                $justify-content: space-around,
+            );
             padding: 0.5rem 0;
-            justify-content: space-around;
             li {
                 list-style: none;
-                font-size: large;
+                font-size: larger;
             }
         }
     }
-    a {
-        text-decoration: none;
-        color: black;
-        &:hover {
-            color: $secondaryColor;
-        }
-    }
-    border-bottom: 0.05rem solid #e2e8f0;
-    // box-shadow: 0 0.1rem #e2e8f0;
 }
