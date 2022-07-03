@@ -3,6 +3,8 @@
 
 @import "./variables";
 @import "./header";
+@import "./signupin";
+
 
 * {
     margin: 0;
@@ -88,81 +90,7 @@ footer {
     color: white;
     padding: 1rem;
     text-align: center;
-    font-weight: 300;
-}
-
-
-
-// Sign In / Sign Up Form
-.sign {
-    display: flex;
-    flex-flow: column; // @media
-    margin: 2rem;
-    .sign-info {
-        flex-basis: 50%;
-        display: flex;
-        flex-flow: column;
-        padding: 0 1rem;
-        margin-bottom: 1rem; // @media
-        p {
-            margin: auto 0;
-        }
-    }
-    .sign-form {
-        flex-basis: 50%;
-        legend {
-            background-color: #1e293b;
-            color: white;
-            padding: 1rem;
-            margin-bottom: 0.5rem;
-            border-radius: 1rem 1rem 0 0;
-            font-size: larger;
-            font-weight: 200;
-        }
-        .form-input {
-            display: flex;
-            flex-flow: column;
-            padding: 0 1rem;
-            margin-bottom: 0.5rem;
-            label {
-                &::after {
-                    content: ' *';
-                    color: red;
-                }
-            }
-            input {
-                padding: 0.5rem;
-                &::placeholder {
-                    color: #94a3b8;
-                }
-            }
-        }
-        .form-submission {
-            padding: 0 1rem;
-            display: flex;
-            flex-flow: column; // @media
-            justify-content: space-between;
-            align-items: flex-start; // @media
-            margin-top: 1rem; // @media
-        }
-        .button {
-            margin: 0.5rem 0.75rem 0 0;
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-            text-align: right;
-            background-color: #1d4ed8;
-            color: white;
-            font-size: medium;
-            font-weight: 200;
-            border: thin solid #e1e7ef;
-            &:hover {
-                cursor: pointer;
-                background-color: #1e40af;
-            }
-        }
-    }
-}
-
+    font-weight: 300;}
 
 
 
@@ -173,19 +101,6 @@ footer {
                 .blog-left-heading {
                     margin-bottom: 0;
                 }
-            }
-        }
-    }
-    .sign {
-        flex-flow: row;
-        .sign-info {
-            margin-bottom: 0;
-        }
-        .sign-form {
-            .form-submission {
-                flex-flow: row wrap;
-                align-items: center;
-                margin-top: 0;
             }
         }
     }

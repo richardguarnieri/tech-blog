@@ -27,6 +27,92 @@ header a:hover {
   color: #3b82f6;
 }
 
+.sign {
+  display: flex;
+  flex-flow: column;
+  margin: 2rem;
+}
+.sign .sign-info {
+  flex-basis: 50%;
+  display: flex;
+  flex-flow: column;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+.sign .sign-info p {
+  margin: auto 0;
+}
+.sign .sign-form {
+  flex-basis: 50%;
+}
+.sign .sign-form legend {
+  background-color: #1e293b;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem 1rem 0 0;
+  font-size: larger;
+  font-weight: 200;
+}
+.sign .sign-form .form-input {
+  display: flex;
+  flex-flow: column;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+.sign .sign-form .form-input label::after {
+  content: " *";
+  color: red;
+}
+.sign .sign-form .form-input input {
+  padding: 0.5rem;
+}
+.sign .sign-form .form-input input::-moz-placeholder {
+  color: #94a3b8;
+}
+.sign .sign-form .form-input input:-ms-input-placeholder {
+  color: #94a3b8;
+}
+.sign .sign-form .form-input input::placeholder {
+  color: #94a3b8;
+}
+.sign .sign-form .form-submission {
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+.sign .sign-form .button {
+  margin: 0.5rem 0.75rem 0 0;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-align: right;
+  background-color: #1d4ed8;
+  color: white;
+  font-size: medium;
+  font-weight: 200;
+  border: thin solid #e1e7ef;
+}
+.sign .sign-form .button:hover {
+  cursor: pointer;
+  background-color: #1e40af;
+}
+
+@media screen and (min-width: 640px) {
+  .sign {
+    flex-flow: row;
+  }
+  .sign .sign-info {
+    margin-bottom: 0;
+  }
+  .sign .sign-form .form-submission {
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -113,93 +199,8 @@ footer {
   font-weight: 300;
 }
 
-.sign {
-  display: flex;
-  flex-flow: column;
-  margin: 2rem;
-}
-.sign .sign-info {
-  flex-basis: 50%;
-  display: flex;
-  flex-flow: column;
-  padding: 0 1rem;
-  margin-bottom: 1rem;
-}
-.sign .sign-info p {
-  margin: auto 0;
-}
-.sign .sign-form {
-  flex-basis: 50%;
-}
-.sign .sign-form legend {
-  background-color: #1e293b;
-  color: white;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 1rem 1rem 0 0;
-  font-size: larger;
-  font-weight: 200;
-}
-.sign .sign-form .form-input {
-  display: flex;
-  flex-flow: column;
-  padding: 0 1rem;
-  margin-bottom: 0.5rem;
-}
-.sign .sign-form .form-input label::after {
-  content: " *";
-  color: red;
-}
-.sign .sign-form .form-input input {
-  padding: 0.5rem;
-}
-.sign .sign-form .form-input input::-moz-placeholder {
-  color: #94a3b8;
-}
-.sign .sign-form .form-input input:-ms-input-placeholder {
-  color: #94a3b8;
-}
-.sign .sign-form .form-input input::placeholder {
-  color: #94a3b8;
-}
-.sign .sign-form .form-submission {
-  padding: 0 1rem;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 1rem;
-}
-.sign .sign-form .button {
-  margin: 0.5rem 0.75rem 0 0;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  text-align: right;
-  background-color: #1d4ed8;
-  color: white;
-  font-size: medium;
-  font-weight: 200;
-  border: thin solid #e1e7ef;
-}
-.sign .sign-form .button:hover {
-  cursor: pointer;
-  background-color: #1e40af;
-}
-
 @media screen and (min-width: 640px) {
   #home .blog .blog-heading .blog-left-heading {
     margin-bottom: 0;
-  }
-
-  .sign {
-    flex-flow: row;
-  }
-  .sign .sign-info {
-    margin-bottom: 0;
-  }
-  .sign .sign-form .form-submission {
-    flex-flow: row wrap;
-    align-items: center;
-    margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
