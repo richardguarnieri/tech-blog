@@ -158,7 +158,8 @@ footer {
             padding: 0 1rem;
             margin-bottom: 0.5rem;
             label {
-                .required {
+                &::after {
+                    content: ' *';
                     color: red;
                 }
             }

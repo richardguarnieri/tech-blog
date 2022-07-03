@@ -147,7 +147,8 @@ footer {
   padding: 0 1rem;
   margin-bottom: 0.5rem;
 }
-.sign .sign-form .form-input label .required {
+.sign .sign-form .form-input label::after {
+  content: " *";
   color: red;
 }
 .sign .sign-form .form-input input {
