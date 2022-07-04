@@ -22,10 +22,16 @@ User.init({
         type: DataTypes.STRING(32),
         allowNull: false,
         unique: true,
+        validate: {
+            isAlphanumeric: true,
+        }
     },
     password: {
         type: DataTypes.STRING(64),
         allowNull: false,
+        validate: {
+            is: /^[0-9a-f]{64}$/i,
+        }
     }
 }, {
     sequelize,
