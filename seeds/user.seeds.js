@@ -1,12 +1,18 @@
 const User = require('../models/User');
 
 const users = [
-    {email: 'example@example.com', username: 'example', password: '12345678'},
-    {email: 'example@example.com', username: 'example', password: '12345678'},
+    {email: 'example1@example.com', username: 'example1', password: '12345678'},
+    {email: 'example2@example.com', username: 'example2', password: '12345678'},
+    {email: 'example3@example.com', username: 'example3', password: '12345678'},
 ]
 
-const seedUsers = () => {
-    User.bulkCreate(users);
+const seedUsers = async () => {
+    try {
+        await User.bulkCreate(users);
+        console.log('\n---------- User has been seeded successfully ----------');
+    } catch (err) {
+        console.log(err.message);
+    };
 }
 
 module.exports = seedUsers;
