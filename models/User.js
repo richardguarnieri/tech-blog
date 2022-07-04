@@ -4,22 +4,33 @@ const sequelize = require('./../config/connection');
 class User extends Model {};
 
 User.init({
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+    },
     email: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(64),
+        allowNull: false,
+        unique: true,
+        validate: {
+            isEmail: true,
+        }
     },
-    firstName: {
-        type: DataTypes.STRING,
+    username: {
+        type: DataTypes.STRING(32),
+        allowNull: false,
+        unique: true,
     },
-    firstName: {
-        type: DataTypes.STRING,
-    },
-    firstName: {
-        type: DataTypes.STRING,
-    },
-    firstName: {
-        type: DataTypes.STRING,
-    },
-    firstName: {
-        type: DataTypes.STRING,
+    password: {
+        type: DataTypes.STRING(64),
+        allowNull: false,
     }
+}, {
+    sequelize,
+    freezeTableName: true,
+    modelName: 'user'
 })
+
+module.exports = User;
