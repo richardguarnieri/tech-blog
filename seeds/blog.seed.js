@@ -10,7 +10,7 @@ const blogs = [
 const seedBlogs = async () => {
     try {
         await Blog.bulkCreate(blogs);
-        console.log('\n---------- Blog has been seeded successfully ----------');
+        console.log('\n---------- BLOG HAS BEEN SEEDED SUCCESSFULLY ----------\n');
     } catch (err) {
         console.log(err.message);
     };

@@ -9,7 +9,7 @@ const users = [
 const seedUsers = async () => {
     try {
         await User.bulkCreate(users);
-        console.log('\n---------- User has been seeded successfully ----------');
+        console.log('\n---------- USER HAS BEEN SEEDED SUCCESSFULLY ----------\n');
     } catch (err) {
         console.log(err.message);
     };
