@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const Blog = require('./../models/Blog');
+const Comment = require('./../../models/Comment');
 
 router.get('/', async (req, res) => {
-    const response = await Blog.findAll();
+    const response = await Comment.findAll();
     res.status(200).json(response);
 })
 
