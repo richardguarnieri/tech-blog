@@ -8,20 +8,20 @@
 
     {{!-- Form --}}
     <div class="sign-form">
-        <form action="">
+        <form action="/api/users" method="POST">
             <fieldset>
                 <legend>Sign Up</legend>
                 <div class="form-input">
                     <label for="signup-email">Email</label>
-                    <input type="email" name="" id="signup-email" placeholder="name@example.com" required>
+                    <input type="email" name="email" id="signup-email" placeholder="name@example.com" required>
                 </div>
                 <div class="form-input">
                     <label for="signup-username">Username</label>
-                    <input type="text" name="" id="signup-username" placeholder="Your username" required>
+                    <input type="text" name="username" id="signup-username" placeholder="Your username" required>
                 </div>
                 <div class="form-input">
                     <label for="signup-password">Password</label>
-                    <input type="password" name="" id="signup-password" placeholder="Your password" required>
+                    <input type="password" name="password" id="signup-password" placeholder="Your password" required>
                 </div>
                 <div class="form-submission">
                     <a href="/signin">Already a member? Sign In!</a>
