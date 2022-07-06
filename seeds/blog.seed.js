@@ -1,4 +1,4 @@
-const Blog = require('../models/Blog');
+const { Blog } = require('../models');
 
 const blogs = [
     {title: 'Title One', content: 'Content Example', userId: 1},

@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const { User } = require('../models');
 
 const users = [
     {email: 'example1@example.com', username: 'example1', password: '12345678'},
