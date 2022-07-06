@@ -9,14 +9,18 @@ const User = require('./../../models/User');
 
 router.post('/signin', async (req, res) => {
     try {
+        console.log(req.body);
         const { username, password } = req.body;
-        const response = User.findOne({where: {username: username}});
+        const response = await User.findOne({where: {username: username}});
+        console.log(response);
         if (!response) {
-            res.status(500).send({ message: 'Incorrect username or password!!!, please try again' });
+            res.status(500).json({ message: 'Incorrect username or password, please try again' });
+            return;
         }
         const isValidPassword = response.validatePassword(password);
         if (!isValidPassword) {
-            res.status(500).send('pwd not found');
+            res.status(500).json({ message: 'Incorrect username or password, please try again' });
+            return;
         }
         res.redirect('/dashboard');
     } catch (err) {
@@ -32,7 +36,7 @@ router.post('/signup', async (req, res) => {
         });
         res.redirect('/');
     } catch (err) {
-        res.status(500).send(err.message);
+        res.status(500).json(err.message);
     }
 })
 
