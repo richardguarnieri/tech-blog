@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Blog = require('./../models/Blog');
 
 const api = require('./api');
 const signin = require('./signin');
@@ -13,8 +14,10 @@ router.use('/signup', signup);
 router.use('/dashboard', dashboard);
 router.use('/createPost', createPost);
 
-router.get('/', (req, res) => {
-    res.render('home');
+router.get('/', async (req, res) => {
+    const response = await Blog.findAll({raw: true});
+    console.log(response);
+    res.render('home', {response});
 })
 
 module.exports = router;
