@@ -1,10 +1,17 @@
+const sequelize = require('./config/connection');
 const express = require('express');
 const routes = require('./controllers');
-const sequelize = require('./config/connection');
+const { engine } = require('express-handlebars');
 
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+
+console.log(process.env);
+
+app.use(express.static('public'));
 app.use(routes);
 
 const init = async () => {
