@@ -9,9 +9,8 @@ const port = process.env.PORT || 3001;
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 
-console.log(process.env);
-
-app.use(express.urlencoded())
+// app.use(express.json());
+app.use(express.urlencoded());
 app.use(express.static('public'));
 app.use(routes);
 

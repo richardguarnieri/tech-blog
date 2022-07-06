@@ -10,17 +10,17 @@ const User = require('./../../models/User');
 router.post('/signin', async (req, res) => {
     try {
         const { username, password } = req.body;
-        const response = User.findOne({
-            where: {
-                username: username
-            }
-        })
+        const response = User.findOne({where: {username: username}});
         if (!response) {
-            res.status(500).send('user not found');
+            res.status(500).send({ message: 'Incorrect username or password!!!, please try again' });
         }
-        response.
+        const isValidPassword = response.validatePassword(password);
+        if (!isValidPassword) {
+            res.status(500).send('pwd not found');
+        }
+        res.redirect('/dashboard');
     } catch (err) {
-        res.status(500).send(err.message);
+        res.status(500).json(err.message);
     }
 })
 
