@@ -2,7 +2,11 @@ const { Model, DataTypes} = require('sequelize');
 const sequelize = require('./../config/connection');
 const bcrypt = require('bcrypt');
 
-class User extends Model {};
+class User extends Model {
+    validatePassword(password) {
+        return bcrypt.compare(password, this.password);
+    };
+};
 
 User.init({
     id: {
@@ -30,9 +34,9 @@ User.init({
     password: {
         type: DataTypes.STRING(64),
         allowNull: false,
-        validate: {
-            is: /^[0-9a-f]{64}$/i,
-        }
+        // validate: {
+        //     is: /^[0-9a-f]{64}$/i,
+        // }
     }
 }, {
     hooks: {

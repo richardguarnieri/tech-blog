@@ -10,10 +10,15 @@ const User = require('./../../models/User');
 router.post('/signin', async (req, res) => {
     try {
         const { username, password } = req.body;
-        await User.create({
-            email, username, password
-        });
-        res.redirect('/dashboard');
+        const response = User.findOne({
+            where: {
+                username: username
+            }
+        })
+        if (!response) {
+            res.status(500).send('user not found');
+        }
+        response.
     } catch (err) {
         res.status(500).send(err.message);
     }
