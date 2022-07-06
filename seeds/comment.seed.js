@@ -1,10 +1,10 @@
 const { Comment } = require('../models');
 
 const comments = [
-    {content: 'Comment Example', userId: 1, blogId: 3},
-    {content: 'Comment Example', userId: 2, blogId: 3},
-    {content: 'Comment Example', userId: 3, blogId: 2},
-    {content: 'Comment Example', userId: 2, blogId: 1},
+    {content: 'Comment Example', userId: 1},
+    {content: 'Comment Example', userId: 2},
+    {content: 'Comment Example', userId: 3},
+    {content: 'Comment Example', userId: 2},
 ]
 
 const seedComments = async () => {
