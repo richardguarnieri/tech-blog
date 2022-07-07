@@ -41,9 +41,6 @@ header nav ul li {
 .blog:hover .blog-heading {
   background-color: #1d4ed8;
 }
-.blog:hover + section legend {
-  background-color: #1d4ed8;
-}
 
 .blog-heading {
   display: flex;
@@ -218,6 +215,10 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.legendGray {
+  background-color: #94a3b8;
 }
 
 * {
