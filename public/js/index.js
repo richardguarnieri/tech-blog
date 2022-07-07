@@ -3,6 +3,10 @@ const blogsEl = document.querySelectorAll('.blog');
 
 blogsEl.forEach((blog) => {
     blog.addEventListener('click', (event) => {
+        // console.log(event.currentTarget.parentNode.id)
+        if (event.currentTarget.parentNode.id == 'dashboard') {
+            return;
+        }
         // console.log(event.currentTarget.nextElementSibling);
         let commentEl = event.currentTarget.nextElementSibling;
         let addCommentEl = event.currentTarget.nextElementSibling.nextElementSibling;

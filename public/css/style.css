@@ -160,14 +160,23 @@ img {
     align-items: center;
   }
 }
-.post, .comments {
+.post {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
   gap: 0;
-  margin: 2rem 0;
+  margin: 2rem 3rem;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
 }
 
 .comment {
