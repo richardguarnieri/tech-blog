@@ -4,17 +4,30 @@ const dashboardArticlesEl = document.querySelectorAll('.blog-dashboard')
 const deleteBtnEl = document.querySelector('#delete-btn')
 
 // console.log(dashboardArticlesEl);
-// if (dashboardArticles El) {
-dashboardArticlesEl.forEach((article) => {
-    article.addEventListener('click', (event) => {
-        const articleDataId = article.getAttribute('data-id');
-        window.location = `/updatePost/${articleDataId}`;
-    });
-})
+if (dashboardArticlesEl) {
+    dashboardArticlesEl.forEach((article) => {
+        article.addEventListener('click', (event) => {
+            const articleDataId = article.getAttribute('data-id');
+            window.location = `/updatePost/${articleDataId}`;
+        });
+    })
+}
 
-deleteBtnEl.addEventListener('click', () => {
-    fetch('/api/blogs/delete')
-})
+// console.log(document.querySelector('textarea[name=blogId]').innerHTML);
+if (deleteBtnEl) {
+    deleteBtnEl.addEventListener('click', async () => {
+        await fetch('/api/blogs/delete', {
+            method: 'DELETE',
+            body: JSON.stringify({
+                id: document.querySelector('textarea[name=blogId]').innerHTML
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        window.location = '/dashboard'
+    })
+}
 
 homeArticlesEl.forEach((article) => {
     article.addEventListener('click', (event) => {

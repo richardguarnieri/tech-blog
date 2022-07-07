@@ -26,16 +26,18 @@ router.post('/update', async (req, res) => {
     res.redirect('/dashboard');
 })
 
-router.post('/update', async (req, res) => {
+router.delete('/delete', async (req, res) => {
     console.log(req.body);
-    const { blogId, title, content } = req.body;
-    const response = await Blog.update({title: title, content: content}, {
+    const { id } = req.body;
+    const response = await Blog.destroy({
         where: {
-            id: blogId,
+            id: id,
         }
     })
-    // console.log(response);
-    res.redirect('/dashboard');
+    res.status(200).json({
+        success: true,
+        message: `Blog ${id} has been sucessfully deleted`
+    });
 })
 
 module.exports = router;
