@@ -9,7 +9,9 @@ const blogComments = [
 
 const seedBlogComments = async () => {
     try {
-        await BlogComment.bulkCreate(blogComments);
+        await BlogComment.bulkCreate(blogComments, {
+            validate: true,
+        });
         console.log('\n---------- BLOG COMMENT HAS BEEN SEEDED SUCCESSFULLY ----------\n');
     } catch (err) {
         console.log(err.message);

@@ -13,9 +13,9 @@ Blog.init({
     title: {
         type: DataTypes.STRING(64),
         allowNull: false,
-        validate: {
-            isAlphanumeric: true,
-        }
+        // validate: {
+        //     isAlphanumeric: true,
+        // }
     },
     content: {
         type: DataTypes.TEXT,
