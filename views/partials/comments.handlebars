@@ -1,6 +1,9 @@
 {{!-- Comments --}}
 <section id="comments" class="comments hidden">
+    {{!-- If comments is empty, do not show the header --}}
+    {{#if this.comments}}
     <legend class="m-0">Comments</legend>
+    {{/if}}
     {{#each this.comments as |comment|}}
     <article class="comment">
         <div class="comment-content">
