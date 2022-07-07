@@ -14,19 +14,28 @@ router.post('/create', async (req, res) => {
     res.redirect('/dashboard');
 })
 
-// router.get('/:id', async (req, res) => {
-//     const { id } = req.params;
-//     const response = await Blog.findByPk(id, {
-//         attributes: ['title', 'content']
-//     });
-//     const blogData = {
-//         id: id,
-//         title: response.title,
-//         content: response.content
+router.post('/update', async (req, res) => {
+    console.log(req.body);
+    const { blogId, title, content } = req.body;
+    const response = await Blog.update({title: title, content: content}, {
+        where: {
+            id: blogId,
+        }
+    })
+    // console.log(response);
+    res.redirect('/dashboard');
+})
 
-//     }
-//     // console.log(response);
-//     res.render('updatePost', {blogData})
-// })
+router.post('/update', async (req, res) => {
+    console.log(req.body);
+    const { blogId, title, content } = req.body;
+    const response = await Blog.update({title: title, content: content}, {
+        where: {
+            id: blogId,
+        }
+    })
+    // console.log(response);
+    res.redirect('/dashboard');
+})
 
 module.exports = router;

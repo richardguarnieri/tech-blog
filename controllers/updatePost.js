@@ -13,8 +13,9 @@ router.get('/:id', async (req, res) => {
         content: response.content
 
     }
-    // console.log(response);
     res.render('updatePost', {blogData})
 })
+
+
 
 module.exports = router;
