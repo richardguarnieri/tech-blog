@@ -1,11 +1,14 @@
 {{!-- Add Comment --}}
 <section id="add-comment" class="post hidden">
-    <form action="">
+    <form action="/api/comments/add" method="POST">
         <fieldset>
             <legend class="legendGray">Add Comment</legend>
             <div class="form-input">
                 <label for="add-comment">Comment</label>
                 <textarea name="content" id="add-comment" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-input d-none">
+                <textarea name="blogId" cols="30" rows="10">{{this.id}}</textarea>
             </div>
             <div class="form-submission justify-end">
                 <button type="submit">Submit</button>
