@@ -25,7 +25,8 @@ router.use('/createPost', createPost);
 // })
 
 router.get('/', async (req, res) => {
-    const response = await Blog.findAll({include: [User, Comment]});
+    const response = await Blog.findAll({include: [{model: User, model: Comment, include: [User]}]
+    });
     const responseParsed = JSON.parse(JSON.stringify(response));
     // res.json(responseParsed)
     res.render('home', {responseParsed});
