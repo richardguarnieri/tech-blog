@@ -250,6 +250,11 @@ footer {
   background-color: #ef4444;
 }
 
+.error-msg {
+  color: #ef4444;
+  padding: 0.5rem 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
