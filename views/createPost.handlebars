@@ -1,15 +1,15 @@
 {{!-- Create Post --}}
 <section id="create-post" class="post">
-    <form action="">
+    <form action="/api/blogs/create" method="POST">
         <fieldset>
             <legend>Create Post</legend>
             <div class="form-input">
                 <label for="post-title">Post Title</label>
-                <input type="text" name="" id="post-title" placeholder="Post Title" required>
+                <input type="text" name="title" id="post-title" placeholder="Post Title" required>
             </div>
             <div class="form-input">
                 <label for="post-content">Content</label>
-                <textarea name="" id="post-content" cols="30" rows="10"></textarea>
+                <textarea name="content" id="post-content" cols="30" rows="10"></textarea>
             </div>
             <div class="form-submission justify-end">
                 <button type="submit">Create</button>
