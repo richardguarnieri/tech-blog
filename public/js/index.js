@@ -1,17 +1,24 @@
 const homeEl = document.querySelector('#home');
-const blogsEl = document.querySelectorAll('.blog');
+const homeArticlesEl = document.querySelectorAll('.blog-home');
+const dashboardArticlesEl = document.querySelectorAll('.blog-dashboard')
 
-blogsEl.forEach((blog) => {
-    blog.addEventListener('click', (event) => {
-        // console.log(event.currentTarget.parentNode.id)
-        if (event.currentTarget.parentNode.id == 'dashboard') {
-            return;
-        }
-        // console.log(event.currentTarget.nextElementSibling);
-        let commentEl = event.currentTarget.nextElementSibling;
-        let addCommentEl = event.currentTarget.nextElementSibling.nextElementSibling;
-        // console.log(commentEl);
-        // console.log(addCommentEl);
+console.log(dashboardArticlesEl);
+// if (dashboardArticles El) {
+dashboardArticlesEl.forEach((article) => {
+    article.addEventListener('click', async (event) => {
+        const articleDataId = article.getAttribute('data-id');
+        window.location = '/updatePost';
+        fetch('/api/blogs');
+        
+    })
+
+})
+// }
+
+homeArticlesEl.forEach((article) => {
+    article.addEventListener('click', (event) => {
+        const commentEl = event.currentTarget.nextElementSibling;
+        const addCommentEl = event.currentTarget.nextElementSibling.nextElementSibling;
         // commentEl.children.length != 0 to avoid displaying the section with no elements in the HTML - better UX
         if (commentEl.children.length != 0) {
             commentEl.classList.toggle('active')

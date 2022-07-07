@@ -9,12 +9,14 @@ const signin = require('./signin');
 const signup = require('./signup');
 const dashboard = require('./dashboard');
 const createPost = require('./createPost');
+const updatePost = require('./updatePost');
 
 router.use('/api', api);
 router.use('/signin', signin);
 router.use('/signup', signup);
 router.use('/dashboard', dashboard);
 router.use('/createPost', createPost);
+router.use('/updatePost', updatePost);
 
 router.get('/', async (req, res) => {
     const response = await Blog.findAll({

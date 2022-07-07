@@ -11,7 +11,18 @@ router.post('/create', async (req, res) => {
         userId: userId
     });
     console.log(response);
-    res.redirect('/');
+    res.redirect('/dashboard');
+})
+
+router.get('/:id', async (req, res) => {
+    const { id } = req.params;
+    const response = await Blog.create({
+        title: title,
+        content: content,
+        userId: userId
+    });
+    console.log(response);
+    res.redirect('/dashboard');
 })
 
 module.exports = router;

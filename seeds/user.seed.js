@@ -10,7 +10,7 @@ const seedUsers = async () => {
     try {
         await User.bulkCreate(users, {
             validate: true,
-            individualHooks: true
+            // individualHooks: true
         });
         console.log('\n---------- USER HAS BEEN SEEDED SUCCESSFULLY ----------\n');
     } catch (err) {
