@@ -1,7 +1,7 @@
 <section id="home" class="blogs">
 
     {{!-- Blog --}}
-    {{#each response as |blog|}}
+    {{#each responseParsed as |blog|}}
     <article class="blog">
         <div class="blog-heading">
             <div class="blog-left-heading">
@@ -10,14 +10,14 @@
             </div>
             <div class="blog-right-heading">
                 <img src="/img/profile_picture_secondary.jpg" alt="">
-                <p class="article-creator">Richard Guarnieri</p>
+                <p class="article-creator">{{blog.user.username}}</p>
             </div>
         </div>
         <div class="blog-content">
             <p class="article-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eveniet sunt temporibus unde. Corrupti sapiente ratione repellendus blanditiis fuga, quos nemo itaque aliquid libero magnam totam eos necessitatibus molestias optio?</p>
         </div>
     </article>
-    {{> comments}}
+    {{> comments this}}
     {{> add-comment}}
     {{/each}}
 

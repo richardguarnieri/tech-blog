@@ -1,18 +1,13 @@
 {{!-- Comments --}}
 <section id="comments" class="comments">
     <legend class="m-0">Comments</legend>
+    {{#each this.comments as |comment|}}
     <article class="comment">
         <div class="comment-content">
-            <p class="article-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eveniet sunt temporibus unde. Corrupti sapiente ratione repellendus blanditiis fuga, quos nemo itaque aliquid libero magnam totam eos necessitatibus molestias optio?</p>
+            <p class="article-content">{{comment.content}}</p>
             <br>
-            <p class="article-content">by: Richard Guarnieri, January 1, 2022</p>
+            <p class="article-content">by: {{comment.userId}} / on: {{comment.createdAt}}</p>
         </div>
     </article>
-    <article class="comment">
-        <div class="comment-content">
-            <p class="article-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eveniet sunt temporibus unde. Corrupti sapiente ratione repellendus blanditiis fuga, quos nemo itaque aliquid libero magnam totam eos necessitatibus molestias optio?</p>
-            <br>
-            <p class="article-content">by: Richard Guarnieri, January 1, 2022</p>
-        </div>
-    </article>
+    {{/each}}
 </section> 
