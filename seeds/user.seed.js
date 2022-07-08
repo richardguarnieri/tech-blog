@@ -6,16 +6,12 @@ const users = [
     {email: 'example3@example.com', username: 'example3', password: '12345678'},
 ]
 
-const seedUsers = async () => {
-    try {
-        await User.bulkCreate(users, {
-            validate: true,
-            individualHooks: true
-        });
-        console.log('\n---------- USER HAS BEEN SEEDED SUCCESSFULLY ----------\n');
-    } catch (err) {
-        console.log(err.message);
-    };
+const seedUsers = () => {
+    User.bulkCreate(users, {
+        validate: true,
+        individualHooks: true
+    });
+    console.log('\n---------- USER HAS BEEN SEEDED SUCCESSFULLY ----------\n');
 }
 
 module.exports = seedUsers;

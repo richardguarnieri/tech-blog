@@ -7,15 +7,11 @@ const blogComments = [
     {blogId: 2, commentId: 4},
 ]
 
-const seedBlogComments = async () => {
-    try {
-        await BlogComment.bulkCreate(blogComments, {
-            validate: true,
-        });
-        console.log('\n---------- BLOG COMMENT HAS BEEN SEEDED SUCCESSFULLY ----------\n');
-    } catch (err) {
-        console.log(err.message);
-    };
+const seedBlogComments = () => {
+    BlogComment.bulkCreate(blogComments, {
+        validate: true,
+    });
+    console.log('\n---------- BLOG COMMENT HAS BEEN SEEDED SUCCESSFULLY ----------\n');
 }
 
 module.exports = seedBlogComments;

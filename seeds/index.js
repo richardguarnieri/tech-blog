@@ -6,10 +6,10 @@ const seedBlogComments = require('./blogComment.seed');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true, match: /_test$/ })
-    await seedUsers();
-    await seedBlogs();
-    await seedComments();
-    await seedBlogComments();
+    seedUsers();
+    seedBlogs();
+    seedComments();
+    seedBlogComments();
     process.exit()
 }
 

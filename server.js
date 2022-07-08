@@ -2,12 +2,22 @@ const sequelize = require('./config/connection');
 const express = require('express');
 const routes = require('./controllers');
 const { engine } = require('express-handlebars');
+const session = require('express-session');
 
 const app = express();
 const port = process.env.PORT || 3001;
 
+// Handlebars Setup
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
+
+// Session Setup
+const sess = {
+    secret: 'unhackable secret word',
+    resave: false,
+    saveUninitialized: false,
+}
+app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded());

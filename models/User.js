@@ -34,9 +34,9 @@ User.init({
     password: {
         type: DataTypes.STRING(64),
         allowNull: false,
-        // validate: {
-        //     is: /^[0-9a-f]{64}$/i,
-        // }
+        validate: {
+            len: [6],
+        },
     }
 }, {
     hooks: {
@@ -46,12 +46,6 @@ User.init({
             }
             return user;
         },
-        beforeUpdate: async (user) => {
-            if (user.password) {
-                user.password = await bcrypt.hash(user.password, 10);
-            }
-            return user;
-        }
     },
     sequelize,
     freezeTableName: true,
