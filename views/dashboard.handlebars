@@ -1,7 +1,7 @@
 <section id="dashboard" class="blogs">
 
     {{!-- Blog --}}
-    {{#each responseParsed as |blog|}}
+    {{#each blogsParsed as |blog|}}
     <article class="blog blog-dashboard" data-id={{blog.id}}>
         <div class="blog-heading">
             <div class="blog-left-heading">
@@ -22,5 +22,6 @@
     {{!-- Button --}}
     <form action="/createPost" class="text-center">
         <button>+ New Post</button>
-    </form>    
+    </form>   
+     
 </section>

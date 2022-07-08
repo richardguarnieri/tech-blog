@@ -1,7 +1,29 @@
 const express = require('express');
 const router = express.Router();
+
 const { User } = require('./../../models');
  
+// Sign Up
+router.post('/signup', async (req, res) => {
+    const message = 'Credentials do not follow guidelines, please try again!';
+    try {
+        const { email, username, password } = req.body;
+        const response = await User.create({
+            email, username, password
+        });
+        res.status(200).json({
+            success: true,
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            type: message,
+            message: err.message,
+        });
+    }
+})
+
+// Sign In
 router.post('/signin', async (req, res) => {
     const message = 'Incorrect username or password, please try again!';
     try {
@@ -28,25 +50,6 @@ router.post('/signin', async (req, res) => {
         });
     } catch (err) {
         res.status(500).json(err.message);
-    }
-})
-
-router.post('/signup', async (req, res) => {
-    const message = 'Credentials do not follow guidelines, please try again!';
-    try {
-        const { email, username, password } = req.body;
-        const response = await User.create({
-            email, username, password
-        });
-        res.status(200).json({
-            success: true,
-        });
-    } catch (err) {
-        res.json({
-            success: false,
-            message: message,
-            error: err.message,
-        });
     }
 })
 

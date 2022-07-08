@@ -12,7 +12,6 @@ User.hasMany(Comment);
 Blog.belongsToMany(Comment, {
     through: BlogComment,
 })    
-
 Comment.belongsToMany(Blog, {
     through: BlogComment,
 })    

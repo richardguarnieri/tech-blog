@@ -6,8 +6,8 @@ const users = [
     {email: 'example3@example.com', username: 'example3', password: '12345678'},
 ]
 
-const seedUsers = () => {
-    User.bulkCreate(users, {
+const seedUsers = async () => {
+    await User.bulkCreate(users, {
         validate: true,
         individualHooks: true
     });
