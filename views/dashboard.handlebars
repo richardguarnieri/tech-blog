@@ -2,7 +2,7 @@
 
     {{!-- Blog --}}
     {{#each blogsParsed as |blog|}}
-    <article class="blog blog-dashboard" data-id={{blog.id}}>
+    <article class="blog blog-dashboard" data-blog-id={{blog.id}}>
         <div class="blog-heading">
             <div class="blog-left-heading">
                 <p class="article-title">{{blog.title}}</p>
@@ -22,6 +22,7 @@
     {{!-- Button --}}
     <form action="/createPost" class="text-center">
         <button>+ New Post</button>
-    </form>   
-     
+    </form>    
 </section>
+
+<script src="/js/dashboard.js"></script>

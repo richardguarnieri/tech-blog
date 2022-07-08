@@ -1,26 +1,29 @@
 const express = require('express');
 const router = express.Router();
+
 const { Comment } = require('./../../models');
 const { BlogComment } = require('./../../models');
 
+// Create Comment
 router.post('/add', async (req, res) => {
     try {
-        const { content, blogId } = req.body;
+        // create comment on Comment table
         const userId = 1; // TO FIX
-        const response = await Comment.create({
-            content: content,
-            userId: userId
+        const { content, blogId } = req.body;
+        const comment = await Comment.create({
+            content, userId
         });
-        const responseParsed = JSON.parse(JSON.stringify(response));
-        console.log(responseParsed);
+        const commentParsed = JSON.parse(JSON.stringify(comment));
+
+        // create entry on BlogComment table
         const blogComment = await BlogComment.create({
-            blogId: blogId,
-            commentId: responseParsed.id,
+            blogId,
+            commentId: commentParsed.id,
         })
-        res.redirect('/');
+        res.redirect('/')
     } catch (err) {
-        return;
+        res.status(500).json({success: false, message: err.message})
     }
-})
+});
 
 module.exports = router;

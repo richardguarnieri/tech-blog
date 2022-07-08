@@ -17,10 +17,7 @@ router.get('/', async (req, res) => {
         const blogsParsed = JSON.parse(JSON.stringify(blogs));
         res.render('home', {blogsParsed});
     } catch (err) {
-        res.status(500).json({
-            success: false,
-            message: err.message
-        })
+        res.status(500).json({success: false, message: err.message})
     }
 });
 
