@@ -14,7 +14,7 @@ router.get('/:id', async (req, res) => {
             title: blog.title,
             content: blog.content
         };
-        res.render('updatePost', {blogData})
+        res.render('updatePost', {blogData, loggedIn: req.session.loggedIn})
     } catch (err) {
         res.status(500).json({success: false, message: err.message})
     }

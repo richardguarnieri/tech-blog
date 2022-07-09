@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
             include: User
         });
         const blogsParsed = JSON.parse(JSON.stringify(blogs));
-        res.render('dashboard', {blogsParsed});
+        res.render('dashboard', {blogsParsed, loggedIn: req.session.loggedIn});
     } catch (err) {
         res.status(500).json({success: false, message: err.message})
     }

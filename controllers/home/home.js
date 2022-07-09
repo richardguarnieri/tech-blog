@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
             ]
         });
         const blogsParsed = JSON.parse(JSON.stringify(blogs));
-        res.render('home', {blogsParsed});
+        res.render('home', {blogsParsed, loggedIn: res.session.loggedIn});
     } catch (err) {
         res.status(500).json({success: false, message: err.message})
     }

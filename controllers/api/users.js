@@ -10,7 +10,10 @@ router.post('/signup', async (req, res) => {
         await User.create({
             email, username, password
         });
-        res.status(200).json({success: true});
+        req.session.save(() => {
+            req.session.loggedIn = true;
+            res.status(200).json({success: true});
+        });
     } catch (err) {
         res.status(500).json({success: false, message: err.message});
     }
@@ -30,7 +33,10 @@ router.post('/signin', async (req, res) => {
             res.status(500).json({success: false});
             return;
         }
-        res.status(200).json({success: true});
+        req.session.save(() => {
+            req.session.loggedIn = true;
+            res.status(200).json({success: true});
+        });
     } catch (err) {
         res.status(500).json({success: false, message: err.message});
     }
