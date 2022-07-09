@@ -95,12 +95,9 @@ Project Description: `A Tech Blog w/ MVC Paradigm, Handlebars.js, Sequelize ORM 
 
 [![Application Image][application-image]][application-url]
 
-Use this section to provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Blogs give us the great opportunity to translate our views into short, accessible summaries. A lot of people use blogs to openly express themselves, share ideas, communicate directly with customers, among many other things. In this modern era, blogging is an important step into allowing individuals to build and to control their online identity. For this reason, it came an idea to do a fun tech blogging application.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer should **never** be "because it was a homework assignment!")
-- What problem does it solve?
-- What did you learn?
+This application is based on Express.js, Sequelize as MySQL's ORM, bcrypt to hash user passwords, express-session to store session cookies,connect-session-sequelize to store session's data on the database and express-handlebars as the templating engine. The web look and design was as done using SASS.
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
