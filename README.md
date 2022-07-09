@@ -84,9 +84,6 @@ Project Description: `A Tech Blog w/ MVC Paradigm, Handlebars.js, Sequelize ORM 
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Credits and Acknowledgments](#credits-and-acknowledgments)
-* [Features](#features)
-* [Tests](#tests)
 * [Miscellaneous](#miscellaneous)
     * [User Story](#user-story)
     * [Acceptance Criteria](#acceptance-criteria)
@@ -108,15 +105,19 @@ Use this section to provide a short description explaining the what, why, and ho
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
 ### Technology Stack
-Use this section to list the technologies used in the project - examples:
-
 * [HTML](https://html.spec.whatwg.org/)
 * [CSS](https://www.w3.org/TR/CSS/#css)
 * [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 * [SASS](https://sass-lang.com/)
-* [Tailwind CSS](https://tailwindcss.com/)
 * [Node.js](https://nodejs.org/en/)
-* [React.js](https://reactjs.org/)
+* [Express.js](https://expressjs.com/)
+* [Sequelize](https://sequelize.org/)
+* [MySQL2](https://www.npmjs.com/package/mysql2)
+* [bcrypt](https://www.npmjs.com/package/bcrypt)
+* [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+* [express-session](https://www.npmjs.com/package/express-session)
+* [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+* [dotenv](https://www.npmjs.com/package/dotenv)
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
@@ -155,10 +156,6 @@ _For more examples, please refer to the [Documentation][documentation-url]._
 
 <!-- Contribuiting -->
 ## Contributing
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-**Example of this README.md Contributing message:**
-
 Contributions are much welcomed! If you have suggestions to make this application better, please fork the repo and create a pull request. 
 
 You can also open an issue [here][github-issues-url] and tag it with the **"enhancement"** label.
@@ -168,10 +165,6 @@ You can also open an issue [here][github-issues-url] and tag it with the **"enha
 
 <!-- License -->
 ## License
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
-**Example of this README.md License message:**
-
 This project is licensed under the terms of the MIT license. 
 
 See `LICENSE` for more information.
@@ -184,31 +177,6 @@ See `LICENSE` for more information.
 Richard Guarnieri: richard.gm@outlook.com · LinkedIn: [rguarnieri][linkedin-url] · Twitter: [@ric_guarnieri][twitter-url]
 
 Application URL: [https://richard-tech-blog.herokuapp.com/][application-url]
-
-<p align="right"> - <a href="#home">Return to Home</a></p>
-
-
-<!-- Credits and Acknowledgments -->
-## Credits and Acknowledgments
-Use this section to list your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-<p align="right"> - <a href="#home">Return to Home</a></p>
-
-
-<!-- Features -->
-## Features
-**Optional:** If your project has a lot of features, list them here.
-
-<p align="right"> - <a href="#home">Return to Home</a></p>
-
-
-<!-- Tests -->
-## Tests
-**Optional:** Feel free to go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
