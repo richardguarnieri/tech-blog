@@ -18,11 +18,11 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/dashboard">Dashboard</a></li>
-                    {{!-- {{#if loggedIn}} --}}
-                    {{!-- <li><a href="/signout">Sign Out</a></li> --}}
-                    {{!-- {{else}} --}}
+                    {{#if loggedIn}}
+                    <li><button class="signout-btn">Sign Out</button></li>
+                    {{else}}
                     <li><a href="/signin">Sign In</a></li>
-                    {{!-- {{/if}} --}}
+                    {{/if}}
                 </ul>
             </nav>
         </header>

@@ -315,6 +315,32 @@ button:hover {
   background-color: #1e40af;
 }
 
+.signout-btn {
+  padding: 0.75rem 0.5rem;
+  border: thin solid #cbd5e1;
+  border-radius: 0.25rem;
+  display: inline;
+  background-color: transparent;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0;
+  border: none;
+}
+.signout-btn::-moz-placeholder {
+  color: #94a3b8;
+}
+.signout-btn:-ms-input-placeholder {
+  color: #94a3b8;
+}
+.signout-btn::placeholder {
+  color: #94a3b8;
+}
+.signout-btn:hover {
+  background-color: transparent;
+  color: #3b82f6;
+}
+
 input, select, textarea, button {
   font-family: inherit;
 }
