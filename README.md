@@ -97,7 +97,7 @@ Project Description: `A Tech Blog w/ MVC Paradigm, Handlebars.js, Sequelize ORM 
 
 Blogs give us the great opportunity to translate our views into short, accessible summaries. A lot of people use blogs to openly express themselves, share ideas, communicate directly with customers, among many other things. In this modern era, blogging is an important step into allowing individuals to build and to control their online identity. For this reason, it came an idea to do a fun tech blogging application.
 
-This application is based on Express.js, Sequelize as MySQL's ORM, bcrypt to hash user passwords, express-session to store session cookies,connect-session-sequelize to store session's data on the database and express-handlebars as the templating engine. The web look and design was done using SASS.
+This application is based on Express.js, Sequelize as MySQL's ORM, bcrypt to hash user passwords, express-session to store session data, connect-session-sequelize to store session data on the database and express-handlebars as the templating engine. The web look and design was done using SASS.
 
 The app is deployed on Heroku using clearDB as its database: [https://richard-tech-blog.herokuapp.com/][application-url].
 
