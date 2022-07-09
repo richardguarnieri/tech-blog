@@ -15,9 +15,9 @@ Project Description: `A Tech Blog w/ MVC Paradigm, Handlebars.js, Sequelize ORM 
 -->
 
 <!-- Please also update the following links -->
-[logo]: ./img/logo.png
-[application-image]: ./img/app-image.webp
-[application-url]: https://example.com/
+[logo]: ./public/img/logo.png
+[application-image]: ./public/img/app-image.png
+[application-url]: https://richard-tech-blog.herokuapp.com/
 
 <div id="home"><div> 
 
@@ -54,7 +54,7 @@ Project Description: `A Tech Blog w/ MVC Paradigm, Handlebars.js, Sequelize ORM 
 
 <div align="center">
     <a href="https://github.com/richardguarnieri/tech-blog">
-        <img src="./img/logo.png" alt="Logo" width="300" height="auto">
+        <img src="./public/img/logo.png" alt="Logo" width="300" height="auto">
     </a>
     <h1 align="center">Tech Blog</h1>
     <div>
@@ -183,7 +183,7 @@ See `LICENSE` for more information.
 ## Contact
 Richard Guarnieri: richard.gm@outlook.com · LinkedIn: [rguarnieri][linkedin-url] · Twitter: [@ric_guarnieri][twitter-url]
 
-Application URL: [https://example.com/][application-url]
+Application URL: [https://richard-tech-blog.herokuapp.com/][application-url]
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
