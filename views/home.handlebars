@@ -18,7 +18,9 @@
         </div>
     </article>
     {{> comments this}}
+    {{#if loggedIn}}
     {{> add-comment this}}
+    {{/if}}
     {{/each}}
 
 </section>

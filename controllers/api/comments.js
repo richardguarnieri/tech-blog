@@ -8,7 +8,8 @@ const { BlogComment } = require('./../../models');
 router.post('/add', async (req, res) => {
     try {
         // create comment on Comment table
-        const userId = 1; // TO FIX
+        // extract userId from session
+        const userId = req.session.userId;
         const { content, blogId } = req.body;
         const comment = await Comment.create({
             content, userId

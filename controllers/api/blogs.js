@@ -6,8 +6,9 @@ const { Blog } = require('./../../models');
 // Create Post
 router.post('/create', async (req, res) => {
     try {
+        // extract userId from session
+        const userId = req.session.userId;
         const { title, content } = req.body;
-        const userId = 2; // TO FIX
         const blog = await Blog.create({
             title, content, userId
         });

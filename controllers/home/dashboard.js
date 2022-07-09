@@ -6,7 +6,8 @@ const { User } = require('./../../models')
 
 router.get('/', async (req, res) => {
     try {
-        const userId = 2; // TO FIX
+        // extract userId from session
+        const userId = req.session.userId;
         const blogs = await Blog.findAll({
             where: {userId},
             include: User
