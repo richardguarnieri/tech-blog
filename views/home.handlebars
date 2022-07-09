@@ -1,6 +1,7 @@
 <section id="home" class="blogs">
 
     {{!-- Blog --}}
+    {{#if loggedIn}}
     {{#each blogsParsed as |blog|}}
     <article class="blog blog-home">
         <div class="blog-heading">
@@ -18,11 +19,29 @@
         </div>
     </article>
     {{> comments this}}
-    {{#if loggedIn}}
     {{> add-comment this}}
-    {{/if}}
     {{/each}}
-
+    {{else}}
+    {{#each blogsParsed as |blog|}}
+    <article class="blog blog-home">
+        <div class="blog-heading">
+            <div class="blog-left-heading">
+                <p class="article-title">{{blog.title}}</p>
+                <p class="article-date">{{blog.updatedAt}}</p>
+            </div>
+            <div class="blog-right-heading">
+                <img src="/img/profile_picture_secondary.jpg" alt="">
+                <p class="article-creator">{{blog.user.username}}</p>
+            </div>
+        </div>
+        <div class="blog-content">
+            <p class="article-content">{{blog.content}}</p>
+        </div>
+    </article>
+    {{> comments this}}
+    {{/each}}
+    {{/if}}
+    
 </section>
 
 <script src="/js/home.js"></script>
