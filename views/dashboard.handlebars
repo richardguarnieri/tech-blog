@@ -1,28 +1,32 @@
 <section id="dashboard" class="blogs">
 
     {{!-- Blog --}}
-    {{#each blogsParsed as |blog|}}
-    <article class="blog blog-dashboard" data-blog-id={{blog.id}}>
-        <div class="blog-heading">
-            <div class="blog-left-heading">
-                <p class="article-title">{{blog.title}}</p>
-                <p class="article-date">{{blog.updatedAt}}</p>
+    {{#if loggedIn}}
+        {{#each blogsParsed as |blog|}}
+        <article class="blog blog-dashboard" data-blog-id={{blog.id}}>
+            <div class="blog-heading">
+                <div class="blog-left-heading">
+                    <p class="article-title">{{blog.title}}</p>
+                    <p class="article-date">{{blog.updatedAt}}</p>
+                </div>
+                <div class="blog-right-heading">
+                    <img src="/img/profile_picture_secondary.jpg" alt="">
+                    <p class="article-creator">{{blog.user.username}}</p>
+                </div>
             </div>
-            <div class="blog-right-heading">
-                <img src="/img/profile_picture_secondary.jpg" alt="">
-                <p class="article-creator">{{blog.user.username}}</p>
+            <div class="blog-content">
+                <p class="article-content">{{blog.content}}</p>
             </div>
-        </div>
-        <div class="blog-content">
-            <p class="article-content">{{blog.content}}</p>
-        </div>
-    </article>
-    {{/each}}
+        </article>
+        {{/each}}
 
-    {{!-- Button --}}
-    <form action="/createPost" class="text-center">
-        <button>+ New Post</button>
-    </form>    
+        {{!-- Button --}}
+        <form action="/createPost" class="text-center">
+            <button>+ New Post</button>
+        </form>  
+    {{else}}
+        <p class="text-center fs-larger">Please <a href="/signin" class="fw-500">sign in</a> to view the dashboard!</p>
+    {{/if}}  
 </section>
 
 <script src="/js/dashboard.js"></script>

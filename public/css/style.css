@@ -242,6 +242,10 @@ footer {
   font-weight: 500;
 }
 
+.fs-larger {
+  font-size: larger;
+}
+
 .legendGray {
   background-color: #94a3b8;
 }
