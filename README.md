@@ -142,49 +142,9 @@ Unless you are cloning the repo, nothing to install. Otherwise, you would need a
 ## How to Use
 When you open the application, you will be routed to the homepage, which includes existing blog posts if any have been posted as well as comments for each one, navigation links for the homepage, the user dashboard and the option to log in.
 
-To fully access the blog you will need to create an account, which will give you access to the **dashboard** which is where you will see the posts you have created as well as the option to add new posts and modify or delete existing ones.
+To fully access the blog you will need to create an account, this will give you access to the **dashboard** which is where you will see the posts you have created as well as the option to add new posts and modify or delete existing ones.
 
-
-
-
-WHEN I click on the homepage option
-THEN I am taken to the homepage
-WHEN I click on any other links in the navigation
-THEN I am prompted to either sign up or sign in
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
-WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
-WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
-WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the dashboard, and the option to log out
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
-WHEN I click on an existing blog post
-THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
-WHEN I enter a comment and click on the submit button while signed in
-THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-WHEN I click on the dashboard option in the navigation
-THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
-WHEN I click on the button to add a new blog post
-THEN I am prompted to enter both a title and contents for my blog post
-WHEN I click on the button to create a new blog post
-THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
-WHEN I click on one of my existing posts in the dashboard
-THEN I am able to delete or update my post and taken back to an updated dashboard
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
-WHEN I am idle on the site for more than a set time
-THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
-
-Use this section to provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `img` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-```md
-![alt text](assets/images/screenshot.png)
-```
+The **homepage** shows all existing blog posts. When you click on a specific post, the comment section will pop up as well as the option to add a comment (the add comment option only shows up if you are logged in).
 
 _For more examples, please refer to the [Documentation][documentation-url]._
 
