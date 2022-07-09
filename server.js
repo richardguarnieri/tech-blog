@@ -4,6 +4,7 @@ const routes = require('./controllers');
 const { create } = require('express-handlebars');
 const helpers = require('./utils/helpers')
 const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -18,6 +19,9 @@ const sess = {
     secret: 'unhackable secret word',
     resave: false,
     saveUninitialized: false,
+    store: new SequelizeStore({
+        db: sequelize
+    })
 }
 app.use(session(sess));
 
